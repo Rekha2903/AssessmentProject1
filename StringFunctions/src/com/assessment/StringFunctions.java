@@ -1,4 +1,4 @@
-/**
+/**This is a class that contains few String Util functions.
  * 
  */
 package com.assessment;
@@ -21,9 +21,11 @@ public class StringFunctions {
 		String input = s.nextLine();
 		s.close();
 		findRepeatedCharacter(input);
+		System.out.println(palindrome(input));
+
 	}
 
-	private static void findRepeatedCharacter(String input) {
+	public static void findRepeatedCharacter(String input) {
 		HashSet<Character> hs = new HashSet<Character>();
 		HashSet<Character> hs1 = new HashSet<Character>();
 		String lowerCaseStr = input.toLowerCase();
@@ -39,6 +41,20 @@ public class StringFunctions {
 		System.out.println("The repeated characters are " + hs1.toString());
 		hs = null;
 		hs1 = null;
+	}
+	
+	public static String palindrome(String input) {
+
+		StringBuilder sb = new StringBuilder();
+		for (int i = 0; i < input.length(); i++) {
+			sb.append(input.charAt(i));
+		}
+		String reverseString = sb.reverse().toString().toLowerCase();
+
+		if (input.toLowerCase().equals(reverseString)) {
+			return "Yes, the string " + input + " is a palindrome";
+		}
+		return "No, the string " + input + " is not a palindrome";
 	}
 
 }
