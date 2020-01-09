@@ -25,7 +25,7 @@ public class StringFunctions {
 
 	}
 
-	public static void findRepeatedCharacter(String input) {
+	public static String findRepeatedCharacter(String input) {
 		HashSet<Character> hs = new HashSet<Character>();
 		HashSet<Character> hs1 = new HashSet<Character>();
 		String lowerCaseStr = input.toLowerCase();
@@ -40,7 +40,7 @@ public class StringFunctions {
 		}
 		System.out.println("The repeated characters are " + hs1.toString());
 		hs = null;
-		hs1 = null;
+		return hs1.toString();
 	}
 	
 	public static String palindrome(String input) {
