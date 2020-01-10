@@ -3,6 +3,7 @@
  */
 package com.assessment;
 
+import java.util.Date;
 import java.util.HashSet;
 import java.util.Scanner;
 
@@ -22,6 +23,7 @@ public class StringFunctions {
 		s.close();
 		findRepeatedCharacter(input);
 		System.out.println(palindrome(input));
+		System.out.println("Hi Rekha!! Today's date is "+ new Date());
 
 	}
 
